@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".architecture.room.RoomActivity"></activity>
+        <activity android:name=".architecture.navigation.NavigationActivity" />
+        <activity android:name=".architecture.livedata.LiveDataActivity" />
+        <activity android:name=".architecture.lifecycles.LifecycleObserverActivity" />
+        <activity android:name=".foundation.AppCompatViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

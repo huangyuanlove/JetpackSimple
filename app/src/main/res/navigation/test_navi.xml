@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/test_navi"
+    app:startDestination="@id/fragmentA">
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.huangyuanlove.androidjetpack.architecture.navigation.FragmentA"
+        android:label="fragmentA"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+
+        android:name="com.huangyuanlove.androidjetpack.architecture.navigation.FragmentB"
+        android:label="fragmentB"
+        tools:layout="@layout/fragment_b">
+        <argument
+            android:name="title"
+            android:defaultValue="test"
+            app:argType="string" />
+        <argument
+            android:name="num"
+            android:defaultValue="100"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/fragmentC"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+
+        android:name="com.huangyuanlove.androidjetpack.architecture.navigation.FragmentC"
+        android:label="fragmentC"
+        tools:layout="@layout/fragment_c">
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentA"
+            app:destination="@id/fragmentA"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+</navigation>
