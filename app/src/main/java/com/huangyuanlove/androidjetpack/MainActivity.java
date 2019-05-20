@@ -12,6 +12,7 @@ import com.huangyuanlove.androidjetpack.architecture.livedata.LiveDataActivity;
 import com.huangyuanlove.androidjetpack.architecture.navigation.NavigationActivity;
 import com.huangyuanlove.androidjetpack.architecture.room.RoomActivity;
 import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity;
+import com.huangyuanlove.androidjetpack.architecture.workmanager.WorkManagerActivity;
 import com.huangyuanlove.androidjetpack.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.navigation.setOnClickListener(this);
         binding.room.setOnClickListener(this);
         binding.viewmodel.setOnClickListener(this);
+        binding.workManager.setOnClickListener(this);
 
 
 
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.viewmodel:
                 startActivity(new Intent(MainActivity.this, ViewModelActivity.class));
+                break;
+            case R.id.workManager:
+                startActivity(new Intent(MainActivity.this, WorkManagerActivity.class));
                 break;
             default:
                 break;
