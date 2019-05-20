@@ -16,17 +16,17 @@ interface UserDao {
     @Insert
     void insertUser(User user);
     @Insert
-    int inserUsers(ArrayList<User> users);
+    void inserUsers(ArrayList<User> users);
 
     @Update
-    int updateUser(User user);
+    void updateUser(User user);
     @Update
-    int updateUsers(ArrayList<User> users);
+    void updateUsers(ArrayList<User> users);
 
     @Delete
-    int deleteUser(User user);
+    void deleteUser(User user);
     @Delete
-    int deleteUsers(ArrayList<User> users);
+    void deleteUsers(ArrayList<User> users);
 
     @Query("select * from user")
     List<User> getAllUsers();

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".architecture.room.RoomActivity"></activity>
+        <activity android:name=".architecture.workmanager.WorkManagerActivity"></activity>
+        <activity android:name=".architecture.viewmodel.ViewModelActivity" />
+        <activity android:name=".architecture.room.RoomActivity" />
         <activity android:name=".architecture.navigation.NavigationActivity" />
         <activity android:name=".architecture.livedata.LiveDataActivity" />
         <activity android:name=".architecture.lifecycles.LifecycleObserverActivity" />
