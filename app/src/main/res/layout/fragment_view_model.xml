@@ -12,21 +12,18 @@
         tools:context=".architecture.viewmodel.ViewModelActivity">
 
         <EditText
-            android:text="@{user.name}"
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="name" />
 
         <EditText
-            android:text="@{String.valueOf(user.age)}"
             android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="age" />
 
         <EditText
-            android:text="@{user.sex}"
             android:id="@+id/sex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

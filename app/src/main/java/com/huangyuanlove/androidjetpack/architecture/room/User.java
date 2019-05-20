@@ -1,5 +1,6 @@
 package com.huangyuanlove.androidjetpack.architecture.room;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Embedded;
 import androidx.room.Entity;
@@ -11,6 +12,10 @@ import androidx.room.PrimaryKey;
 //@Entity(primaryKeys = {"id", "name"})
 public class User {
 
+
+    public User() {
+    }
+
     public User(int id, int age, String name, Address address) {
         this.id = id;
         this.age = age;
@@ -18,13 +23,18 @@ public class User {
         this.address = address;
     }
 
-    @PrimaryKey
-    public int id;
+
+    public long id;
 
     @ColumnInfo(name = "age")
     public int age;
+    @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "name")
     public String name;
+
+    @ColumnInfo(name = "sex")
+    public String sex;
 
 
     @Embedded

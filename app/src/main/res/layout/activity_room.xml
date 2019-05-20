@@ -84,10 +84,13 @@
                 android:text="query_all" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/show"
+
+        <ListView
+            android:id="@+id/users_list_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+        </ListView>
 
     </LinearLayout>
 </layout>

@@ -31,7 +31,7 @@ interface UserDao {
     @Query("select * from user")
     List<User> getAllUsers();
     @Query("select * from user where id=:id")
-    User user(int id);
+    User getUserByID(int id);
 
 
 }

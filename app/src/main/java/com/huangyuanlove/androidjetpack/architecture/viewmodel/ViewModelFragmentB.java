@@ -43,6 +43,7 @@ public class ViewModelFragmentB extends Fragment implements View.OnClickListener
         view.findViewById(R.id.save).setOnClickListener(this);
         view.findViewById(R.id.reset).setOnClickListener(this);
         view.findViewById(R.id.show).setOnClickListener(this);
+        show();
         return view;
     }
 

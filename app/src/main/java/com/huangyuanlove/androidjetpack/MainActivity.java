@@ -1,15 +1,8 @@
 package com.huangyuanlove.androidjetpack;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.provider.Settings;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -20,7 +13,6 @@ import com.huangyuanlove.androidjetpack.architecture.navigation.NavigationActivi
 import com.huangyuanlove.androidjetpack.architecture.room.RoomActivity;
 import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity;
 import com.huangyuanlove.androidjetpack.databinding.ActivityMainBinding;
-import com.huangyuanlove.androidjetpack.foundation.AppCompatViewActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.navigation.setOnClickListener(this);
         binding.room.setOnClickListener(this);
         binding.viewmodel.setOnClickListener(this);
+
 
 
     }
