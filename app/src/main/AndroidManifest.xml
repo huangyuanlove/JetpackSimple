@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.huangyuanlove.androidjetpack">
 
+
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".architecture.paging.PagingActivity"></activity>
+        <activity android:name=".behavior.downloadmanager.DownloadManagerActivity"/>
+        <activity android:name=".architecture.paging.PagingActivity" />
         <activity android:name=".architecture.workmanager.WorkManagerActivity" />
         <activity android:name=".architecture.viewmodel.ViewModelActivity" />
         <activity android:name=".architecture.room.RoomActivity" />
@@ -20,6 +23,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

@@ -24,6 +24,7 @@ import com.huangyuanlove.androidjetpack.architecture.paging.PagingActivity;
 import com.huangyuanlove.androidjetpack.architecture.room.RoomActivity;
 import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity;
 import com.huangyuanlove.androidjetpack.architecture.workmanager.WorkManagerActivity;
+import com.huangyuanlove.androidjetpack.behavior.downloadmanager.DownloadManagerActivity;
 import com.huangyuanlove.androidjetpack.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.viewmodel.setOnClickListener(this);
         binding.workManager.setOnClickListener(this);
         binding.paging.setOnClickListener(this);
-
+        binding.downloadManager.setOnClickListener(this);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -153,6 +154,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.paging:
                 startActivity(new Intent(MainActivity.this, PagingActivity.class));
+                break;
+            case R.id.download_manager:
+                startActivity(new Intent(MainActivity.this, DownloadManagerActivity.class));
                 break;
             default:
                 break;
