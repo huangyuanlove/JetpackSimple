@@ -20,6 +20,7 @@ import androidx.databinding.DataBindingUtil;
 import com.huangyuanlove.androidjetpack.architecture.lifecycles.LifecycleObserverActivity;
 import com.huangyuanlove.androidjetpack.architecture.livedata.LiveDataActivity;
 import com.huangyuanlove.androidjetpack.architecture.navigation.NavigationActivity;
+import com.huangyuanlove.androidjetpack.architecture.paging.PagingActivity;
 import com.huangyuanlove.androidjetpack.architecture.room.RoomActivity;
 import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity;
 import com.huangyuanlove.androidjetpack.architecture.workmanager.WorkManagerActivity;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.room.setOnClickListener(this);
         binding.viewmodel.setOnClickListener(this);
         binding.workManager.setOnClickListener(this);
+        binding.paging.setOnClickListener(this);
 
 
         new Handler().postDelayed(new Runnable() {
@@ -148,6 +150,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.workManager:
                 startActivity(new Intent(MainActivity.this, WorkManagerActivity.class));
+                break;
+            case R.id.paging:
+                startActivity(new Intent(MainActivity.this, PagingActivity.class));
                 break;
             default:
                 break;
