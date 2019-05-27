@@ -1,8 +1,8 @@
 package com.huangyuanlove.androidjetpack.architecture.lifecycles;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.huangyuanlove.androidjetpack.R;
 

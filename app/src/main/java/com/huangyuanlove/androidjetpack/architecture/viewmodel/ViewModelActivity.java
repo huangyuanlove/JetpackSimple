@@ -1,25 +1,20 @@
 package com.huangyuanlove.androidjetpack.architecture.viewmodel;
 
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.PagerAdapter;
 
-import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.huangyuanlove.androidjetpack.R;
-import com.huangyuanlove.androidjetpack.architecture.navigation.FragmentA;
-import com.huangyuanlove.androidjetpack.architecture.navigation.FragmentB;
 import com.huangyuanlove.androidjetpack.databinding.ActivityViewModelBinding;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ViewModelActivity extends AppCompatActivity {
 

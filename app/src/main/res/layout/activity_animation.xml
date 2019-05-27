@@ -6,10 +6,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.animation.AnimationActivity">
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/animation_drawable_graphics"
-        android:text="animation_drawable_graphics"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="animation_drawable_graphics" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reveal_or_hide_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reveal_or_hide_view" />
+
+
+
+    <LinearLayout
+        android:id="@+id/shared_element"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/shared_element_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="shared_element_button" />
+        <androidx.appcompat.widget.AppCompatImageView
+
+            android:id="@+id/shared_element_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rocket_thrust1"
+             />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shared_element_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="shared_element_text"
+            />
+    </LinearLayout>
+
 
 </LinearLayout>
+

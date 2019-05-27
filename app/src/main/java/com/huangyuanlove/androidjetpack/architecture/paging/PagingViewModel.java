@@ -14,7 +14,6 @@ import androidx.paging.PagedList;
 import com.huangyuanlove.androidjetpack.architecture.room.AppDatabase;
 import com.huangyuanlove.androidjetpack.architecture.room.User;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class PagingViewModel extends AndroidViewModel {

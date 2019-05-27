@@ -10,8 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.view.View;
-import android.view.animation.Animation;
-import android.webkit.HttpAuthHandler;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;

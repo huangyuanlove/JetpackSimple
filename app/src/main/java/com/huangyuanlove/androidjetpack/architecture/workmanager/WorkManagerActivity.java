@@ -1,17 +1,17 @@
 package com.huangyuanlove.androidjetpack.architecture.workmanager;
 //https://www.jianshu.com/p/e495ee6e84de
+
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.work.Constraints;
 import androidx.work.Data;
 import androidx.work.NetworkType;
 import androidx.work.OneTimeWorkRequest;
-import androidx.work.Operation;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
-
-import android.os.Bundle;
-import android.util.Log;
 
 import com.huangyuanlove.androidjetpack.R;
 

@@ -1,7 +1,6 @@
 package com.huangyuanlove.androidjetpack.architecture.room;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -11,7 +10,6 @@ import androidx.databinding.DataBindingUtil;
 import androidx.room.Room;
 
 import com.huangyuanlove.androidjetpack.R;
-import com.huangyuanlove.androidjetpack.databinding.ActivityAppCompatViewBinding;
 import com.huangyuanlove.androidjetpack.databinding.ActivityRoomBinding;
 
 import java.util.ArrayList;
