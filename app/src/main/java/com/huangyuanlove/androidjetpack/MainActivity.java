@@ -24,6 +24,7 @@ import com.huangyuanlove.androidjetpack.architecture.room.RoomActivity;
 import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity;
 import com.huangyuanlove.androidjetpack.architecture.workmanager.WorkManagerActivity;
 import com.huangyuanlove.androidjetpack.behavior.downloadmanager.DownloadManagerActivity;
+import com.huangyuanlove.androidjetpack.behavior.mediaPlayer.MediaPlayerActivity;
 import com.huangyuanlove.androidjetpack.databinding.ActivityMainBinding;
 import com.huangyuanlove.androidjetpack.ui.animation.AnimationActivity;
 import com.huangyuanlove.androidjetpack.ui.palette.PaletteActivity;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.downloadManager.setOnClickListener(this);
         binding.animation.setOnClickListener(this);
         binding.palette.setOnClickListener(this);
+        binding.mediaPlayer.setOnClickListener(this);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -161,8 +163,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.animation:
                 startActivity(new Intent(MainActivity.this, AnimationActivity.class));
                 break;
-                case R.id.palette:
+            case R.id.palette:
                 startActivity(new Intent(MainActivity.this, PaletteActivity.class));
+                break;
+            case R.id.media_player:
+                startActivity(new Intent(MainActivity.this, MediaPlayerActivity.class));
                 break;
             default:
                 break;
