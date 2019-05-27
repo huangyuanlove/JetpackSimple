@@ -1,5 +1,8 @@
 package com.huangyuanlove.androidjetpack.architecture.paging;
 
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -8,9 +11,6 @@ import androidx.paging.PagedList;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.util.Log;
 
 import com.huangyuanlove.androidjetpack.R;
 import com.huangyuanlove.androidjetpack.architecture.room.AppDatabase;

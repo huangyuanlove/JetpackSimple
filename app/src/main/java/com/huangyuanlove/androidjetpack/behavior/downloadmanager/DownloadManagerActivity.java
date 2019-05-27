@@ -1,7 +1,5 @@
 package com.huangyuanlove.androidjetpack.behavior.downloadmanager;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -10,14 +8,13 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.DocumentsContract;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
-import com.huangyuanlove.androidjetpack.R;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.File;
+import com.huangyuanlove.androidjetpack.R;
 
 //https://www.jianshu.com/p/a1389db471c2
 public class DownloadManagerActivity extends AppCompatActivity {

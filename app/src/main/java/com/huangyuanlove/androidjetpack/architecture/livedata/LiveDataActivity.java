@@ -1,11 +1,11 @@
 package com.huangyuanlove.androidjetpack.architecture.livedata;
 
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
-
-import android.os.Bundle;
-import android.util.Log;
 
 import com.huangyuanlove.androidjetpack.R;
 

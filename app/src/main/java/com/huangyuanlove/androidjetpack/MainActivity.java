@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.view.View;
-import android.webkit.HttpAuthHandler;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -26,6 +25,8 @@ import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity
 import com.huangyuanlove.androidjetpack.architecture.workmanager.WorkManagerActivity;
 import com.huangyuanlove.androidjetpack.behavior.downloadmanager.DownloadManagerActivity;
 import com.huangyuanlove.androidjetpack.databinding.ActivityMainBinding;
+import com.huangyuanlove.androidjetpack.ui.animation.AnimationActivity;
+import com.huangyuanlove.androidjetpack.ui.palette.PaletteActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.workManager.setOnClickListener(this);
         binding.paging.setOnClickListener(this);
         binding.downloadManager.setOnClickListener(this);
+        binding.animation.setOnClickListener(this);
+        binding.palette.setOnClickListener(this);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         intent.putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName());
                         intent.putExtra(Settings.EXTRA_CHANNEL_ID, channel.getId());
                         startActivity(intent);
-                        Toast.makeText(MainActivity. this, "请手动将通知打开", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "请手动将通知打开", Toast.LENGTH_SHORT).show();
                     } else {
                         Notification nf = new Notification.Builder(MainActivity.this, channelId)
                                 .setContentText("setContentText")
@@ -73,10 +76,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 .build();
                         notificationManager.notify(1, nf);
                     }
-                }else{
+                } else {
 
                 }
-
 
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -123,9 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             }
-        },3000);
-
-
+        }, 3000);
 
 
     }
@@ -135,13 +135,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.lifecycles:
-                startActivity(new Intent(MainActivity.this,LifecycleObserverActivity.class));
+                startActivity(new Intent(MainActivity.this, LifecycleObserverActivity.class));
                 break;
             case R.id.live_data:
-                startActivity(new Intent(MainActivity.this,LiveDataActivity.class));
+                startActivity(new Intent(MainActivity.this, LiveDataActivity.class));
                 break;
             case R.id.navigation:
-                startActivity(new Intent(MainActivity.this,NavigationActivity.class));
+                startActivity(new Intent(MainActivity.this, NavigationActivity.class));
                 break;
             case R.id.room:
                 startActivity(new Intent(MainActivity.this, RoomActivity.class));
@@ -157,6 +157,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.download_manager:
                 startActivity(new Intent(MainActivity.this, DownloadManagerActivity.class));
+                break;
+            case R.id.animation:
+                startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+                break;
+                case R.id.palette:
+                startActivity(new Intent(MainActivity.this, PaletteActivity.class));
                 break;
             default:
                 break;
