@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.view.View;
+import android.view.animation.Animation;
 import android.webkit.HttpAuthHandler;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity
 import com.huangyuanlove.androidjetpack.architecture.workmanager.WorkManagerActivity;
 import com.huangyuanlove.androidjetpack.behavior.downloadmanager.DownloadManagerActivity;
 import com.huangyuanlove.androidjetpack.databinding.ActivityMainBinding;
+import com.huangyuanlove.androidjetpack.ui.animation.AnimationActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.workManager.setOnClickListener(this);
         binding.paging.setOnClickListener(this);
         binding.downloadManager.setOnClickListener(this);
+        binding.animation.setOnClickListener(this);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -157,6 +160,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.download_manager:
                 startActivity(new Intent(MainActivity.this, DownloadManagerActivity.class));
+                break; case R.id.animation:
+                startActivity(new Intent(MainActivity.this, AnimationActivity.class));
                 break;
             default:
                 break;

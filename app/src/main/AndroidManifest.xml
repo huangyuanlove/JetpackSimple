@@ -3,16 +3,19 @@
     package="com.huangyuanlove.androidjetpack">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:networkSecurityConfig="@xml/network_config"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".behavior.downloadmanager.DownloadManagerActivity"/>
+        <activity android:name=".ui.animation.AnimationDrawableGraphicsActivity"></activity>
+        <activity android:name=".ui.animation.AnimationActivity" />
+        <activity android:name=".behavior.downloadmanager.DownloadManagerActivity" />
         <activity android:name=".architecture.paging.PagingActivity" />
         <activity android:name=".architecture.workmanager.WorkManagerActivity" />
         <activity android:name=".architecture.viewmodel.ViewModelActivity" />
