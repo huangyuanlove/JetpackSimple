@@ -10,34 +10,40 @@ import androidx.lifecycle.OnLifecycleEvent;
 public class MyLifecycleObserver implements LifecycleObserver {
 
 
+    private String tag;
+    public MyLifecycleObserver(String tag){
+        this.tag = tag;
+    }
+
+
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void onCreate(){
-        Log.e("MyLifecycleObserver","ON_CREATE");
+        Log.e(tag,"ON_CREATE");
 
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     public void onStart(){
-        Log.e("MyLifecycleObserver","ON_START");
+        Log.e(tag,"ON_START");
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     public void onResume(){
-        Log.e("MyLifecycleObserver","ON_RESUME");
+        Log.e(tag,"ON_RESUME");
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     public void onPause(){
-        Log.e("MyLifecycleObserver","ON_PAUSE");
+        Log.e(tag,"ON_PAUSE");
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     public void onStop(){
-        Log.e("MyLifecycleObserver","ON_STOP");
+        Log.e(tag,"ON_STOP");
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     public void onDestroy(){
-        Log.e("MyLifecycleObserver","ON_DESTROY");
+        Log.e(tag,"ON_DESTROY");
     }
 
 

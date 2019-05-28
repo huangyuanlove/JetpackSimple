@@ -13,11 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.palette.PaletteActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
-
+        <activity android:name=".architecture.lifecycles.WithoutLifeCycleActivity"></activity>
+        <activity
+            android:name=".ui.palette.PaletteActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".ui.animation.SharedElementActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity android:name=".ui.animation.RevealOrHideViewActivity" />
         <activity android:name=".ui.animation.AnimationDrawableGraphicsActivity" />
         <activity android:name=".ui.animation.AnimationActivity" />

@@ -12,6 +12,6 @@ public class LifecycleObserverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lifecycle_observer);
-        getLifecycle().addObserver(new MyLifecycleObserver());
+        getLifecycle().addObserver(new MyLifecycleObserver("Activity"));
     }
 }

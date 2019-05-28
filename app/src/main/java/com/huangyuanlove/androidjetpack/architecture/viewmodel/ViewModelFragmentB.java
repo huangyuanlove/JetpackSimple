@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.huangyuanlove.androidjetpack.R;
@@ -43,6 +44,12 @@ public class ViewModelFragmentB extends Fragment implements View.OnClickListener
         view.findViewById(R.id.save).setOnClickListener(this);
         view.findViewById(R.id.reset).setOnClickListener(this);
         view.findViewById(R.id.show).setOnClickListener(this);
+        user.getValueChanged().observeForever(new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                show();
+            }
+        });
         show();
         return view;
     }
@@ -61,11 +68,13 @@ public class ViewModelFragmentB extends Fragment implements View.OnClickListener
                 user.setSex(sex.getText().toString());
                 user.setName(name.getText().toString());
                 user.setAge(Integer.valueOf(age.getText().toString()));
+                user.getValueChanged().postValue(1);
                 break;
             case R.id.reset:
                 user.setAge(11);
                 user.setName("aa");
                 user.setSex("M");
+                user.getValueChanged().postValue(1);
                 break;
             case R.id.show:
                 show();

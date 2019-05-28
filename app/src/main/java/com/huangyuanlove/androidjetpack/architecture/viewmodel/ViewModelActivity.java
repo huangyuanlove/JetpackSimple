@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.PagerAdapter;
 
@@ -25,6 +26,12 @@ public class ViewModelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_view_model);
         userViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
+        userViewModel.getValueChanged().observeForever(new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                binding.setUser(userViewModel);
+            }
+        });
 
 
         binding.save.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +40,7 @@ public class ViewModelActivity extends AppCompatActivity {
                 userViewModel.setSex(binding.sex.getText().toString());
                 userViewModel.setName(binding.name.getText().toString());
                 userViewModel.setAge(Integer.valueOf(binding.age.getText().toString()));
+                userViewModel.getValueChanged().postValue(1);
             }
         });
 
@@ -42,10 +50,13 @@ public class ViewModelActivity extends AppCompatActivity {
                 userViewModel.setAge(11);
                 userViewModel.setName("aa");
                 userViewModel.setSex("M");
+                userViewModel.getValueChanged().postValue(1);
                 binding.setUser(userViewModel);
             }
         });
         binding.setUser(userViewModel);
+
+
 
         ArrayList<Fragment> pages = new ArrayList<>();
         pages.add(new ViewModelFragmentA());

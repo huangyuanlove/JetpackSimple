@@ -1,0 +1,1 @@
+原文：https://developer.android.google.cn/topic/libraries/architecture/lifecycle
