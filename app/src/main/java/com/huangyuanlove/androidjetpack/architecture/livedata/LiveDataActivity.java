@@ -21,9 +21,16 @@ public class LiveDataActivity extends AppCompatActivity {
         liveData.observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
-                Log.e("LiveData_one",s);
+                Log.e("observe",s);
             }
         });
+        liveData.observeForever(new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                Log.e("observeForever",s);
+            }
+        });
+        liveData.setValue("onCreate");
     }
 
     @Override
@@ -36,12 +43,6 @@ public class LiveDataActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         liveData.setValue("onResume");
-        liveData.observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                Log.e("LiveData_two",s);
-            }
-        });
     }
 
     @Override

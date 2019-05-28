@@ -14,12 +14,9 @@ public class MyLifecycleObserver implements LifecycleObserver {
     public MyLifecycleObserver(String tag){
         this.tag = tag;
     }
-
-
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void onCreate(){
         Log.e(tag,"ON_CREATE");
-
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     public void onStart(){
