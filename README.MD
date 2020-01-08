@@ -4,39 +4,53 @@
 此外，Android Jetpack 完美兼容 Kotlin 语言，利用 Android KTX 可大幅节省代码量。
 作为下一代的 Android 组件，Android Jetpack 通过提供现代化应用架构以及提供强健的向后兼容能力等方式，让开发者能够快速、轻松地创造拥有卓越性能的高质量应用。
 
-#### foundation
-* AppCompat
-* Android KTX
-* Multidex
-* Test
+### Foundation
 
-#### architecture
-* Data Binding
-* Lifecycles
-* LiveData
-* Navigation
-* Paging
-* Room
-* ViewModel
-* WorkManager
+| 组件 |  官网链接    |  博客链接    |
+| ---- | ---- | ---- |
+|  Android KTX    |  https://developer.android.google.cn/kotlin/ktx.html    | 还没上kotlin，等等再说 |
+|  AppCompat    | https://developer.android.google.cn/topic/libraries/support-library/packages.html | 一些新的支持库，等等再说 |
+|  Car    | https://developer.android.google.cn/auto | 用不着，这个应该不会更新了 |
+| Benchmark| https://developer.android.google.cn/studio/profile/benchmark.html |没怎么研究，等等吧|
+| Multidex |https://developer.android.google.cn/studio/build/multidex.html|看官网链接就好，没啥好说的|
+|Security|https://developer.android.google.cn/topic/security/data|看官网吧|
+|Test|https://developer.android.google.cn/topic/libraries/testing-support-library/index.html|接着看官网|
+|TV|https://developer.android.google.cn/tv|这个写的话，可能会出一系列博客，等等吧|
+|Wear OS by Google|https://developer.android.google.cn/wear|这个没涉及|
 
-#### behavior
-* DownloadManager
-* Media&Palyback
-* Notifications
-* Permissions
-* Sharing
-* Slices
+### Architecture
 
-#### ui
+| 组件 |  官网链接    |  博客链接    |
+| ---- | ---- | ---- |
+| Data Binding | https://developer.android.google.cn/topic/libraries/data-binding/ |      |
+| Lifecycles | https://developer.android.google.cn/topic/libraries/architecture/lifecycle | https://blog.huangyuanlove.com/2019/05/28/JetPack-LiveData-ViewModel-LifeCycle/ |
+| LiveData | https://developer.android.google.cn/topic/libraries/architecture/livedata | https://blog.huangyuanlove.com/2019/05/28/JetPack-LiveData-ViewModel-LifeCycle/ |
+| Navigation | https://developer.android.google.cn/topic/libraries/architecture/navigation.html |      |
+| Paging | https://developer.android.google.cn/topic/libraries/architecture/paging/ |      |
+| Room | https://developer.android.google.cn/training/data-storage/room/index.html |  |
+| ViewModel | https://developer.android.google.cn/topic/libraries/architecture/viewmodel | https://blog.huangyuanlove.com/2019/05/28/JetPack-LiveData-ViewModel-LifeCycle/ |
+| WorkManager | https://developer.android.google.cn/topic/libraries/architecture/workmanager |      |
 
-* Animations and Transitions
-* Auto
-* Emoji
-* Fragment
-* Layout
-* Palette
-* TV
-* WearOS
+### Behavior
 
-别急，我还在慢慢摸索，先看看有哪些功能，慢慢的再出详细的博客文档(如果不跳票的话)。。。。
+| 组件 |  官网链接    |  博客链接    |
+| ---- | ---- | ---- |
+| CameraX |      |      |
+| Media & palyback |      |      |
+| DownloadManager |      |      |
+| Notifications |      |      |
+| Permissions |      |      |
+| Preference |      |      |
+| Sharing |      |      |
+| Slices |      |      |
+
+### UI
+
+| 组件 |  官网链接    |  博客链接    |
+| ---- | ---- | ---- |
+| Animations & Transitions |      |      |
+| Emoji |      |      |
+| Fragment |      |      |
+| Layout |      |      |
+| Palette |      |      |
+

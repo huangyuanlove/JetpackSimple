@@ -39,17 +39,13 @@ public abstract class AppDatabase extends RoomDatabase {
                                     new Runnable() {
                                         @Override
                                         public void run() {
-                                            List<User> users = new ArrayList<>();
                                             for (int i = 0; i < 50; i++) {
 
                                                 User user = new User();
                                                 user.id = System.currentTimeMillis();
                                                 user.age = i ;
                                                 user.name = "item"+i;
-                                                Address address = new Address("city"+ i,"postCode" +i);
-                                                user.address = address;
-
-                                                users.add(user);
+                                                user.address = new Address("city"+ i,"postCode" +i);
                                                 get(context).userDao().insertUser(user);
                                             }
                                         }

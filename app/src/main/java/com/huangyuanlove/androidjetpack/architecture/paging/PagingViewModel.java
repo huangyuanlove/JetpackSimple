@@ -33,26 +33,26 @@ public class PagingViewModel extends AndroidViewModel {
                 .setEnablePlaceholders(true)
                 .build();
         LivePagedListBuilder<Integer, User> livePagedListBuilder = new LivePagedListBuilder<>(dataSourceFactory, config)
-.setFetchExecutor(Executors.newSingleThreadExecutor())
+                .setFetchExecutor(Executors.newSingleThreadExecutor())
                 .setInitialLoadKey(0)
                 .setBoundaryCallback(new PagedList.BoundaryCallback<User>() {
                     @Override
                     public void onZeroItemsLoaded() {
                         super.onZeroItemsLoaded();
-                        Log.d("getRefreshLiveData","没有数据被加载");
+                        Log.d("getRefreshLiveData", "没有数据被加载");
                     }
 
                     @Override
                     public void onItemAtFrontLoaded(@NonNull User itemAtFront) {
                         super.onItemAtFrontLoaded(itemAtFront);
-                        Log.d("getRefreshLiveData","加载第一个-->" + itemAtFront.toString());
+                        Log.d("getRefreshLiveData", "加载第一个-->" + itemAtFront.toString());
 
                     }
 
                     @Override
                     public void onItemAtEndLoaded(@NonNull User itemAtEnd) {
                         super.onItemAtEndLoaded(itemAtEnd);
-                        Log.d("getRefreshLiveData","加载最后一个-->" + itemAtEnd.toString());
+                        Log.d("getRefreshLiveData", "加载最后一个-->" + itemAtEnd.toString());
                     }
                 });
         return livePagedListBuilder.build();

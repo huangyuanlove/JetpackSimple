@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<data>
-    <variable
-        name="user"
-        type="com.huangyuanlove.androidjetpack.architecture.viewmodel.UserViewModel" />
-</data>
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.huangyuanlove.androidjetpack.architecture.viewmodel.UserViewModel" />
+    </data>
+
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,36 +16,38 @@
         tools:context=".architecture.viewmodel.ViewModelActivity">
 
         <EditText
-            android:text="@{user.name}"
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="name" />
+            android:hint="name"
+            android:text="@{user.name}" />
 
         <EditText
-            android:text="@{String.valueOf(user.age)}"
             android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="age" />
+            android:hint="age"
+            android:text="@{String.valueOf(user.age)}" />
 
         <EditText
-            android:text="@{user.sex}"
             android:id="@+id/sex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="sex" />
+            android:hint="sex"
+            android:text="@{user.sex}" />
 
         <Button
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="save" />
+
         <Button
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="reset" />
+
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"

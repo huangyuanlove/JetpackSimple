@@ -21,6 +21,7 @@ import com.huangyuanlove.androidjetpack.architecture.livedata.LiveDataActivity;
 import com.huangyuanlove.androidjetpack.architecture.navigation.NavigationActivity;
 import com.huangyuanlove.androidjetpack.architecture.paging.PagingActivity;
 import com.huangyuanlove.androidjetpack.architecture.room.RoomActivity;
+import com.huangyuanlove.androidjetpack.architecture.roomword.RoomWordActivity;
 import com.huangyuanlove.androidjetpack.architecture.viewmodel.ViewModelActivity;
 import com.huangyuanlove.androidjetpack.architecture.workmanager.WorkManagerActivity;
 import com.huangyuanlove.androidjetpack.behavior.downloadmanager.DownloadManagerActivity;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.liveData.setOnClickListener(this);
         binding.navigation.setOnClickListener(this);
         binding.room.setOnClickListener(this);
+        binding.roomWord.setOnClickListener(this);
         binding.viewmodel.setOnClickListener(this);
         binding.workManager.setOnClickListener(this);
         binding.paging.setOnClickListener(this);
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.animation.setOnClickListener(this);
         binding.palette.setOnClickListener(this);
         binding.mediaPlayer.setOnClickListener(this);
+
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -148,6 +152,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.room:
                 startActivity(new Intent(MainActivity.this, RoomActivity.class));
                 break;
+            case R.id.room_word:
+                startActivity(new Intent(MainActivity.this, RoomWordActivity.class));
+
+                break;
             case R.id.viewmodel:
                 startActivity(new Intent(MainActivity.this, ViewModelActivity.class));
                 break;
@@ -169,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.media_player:
                 startActivity(new Intent(MainActivity.this, MediaPlayerActivity.class));
                 break;
+
             default:
                 break;
         }

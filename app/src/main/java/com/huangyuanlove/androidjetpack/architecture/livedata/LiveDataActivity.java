@@ -46,6 +46,12 @@ public class LiveDataActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        liveData.setValue("onPush");
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         liveData.setValue("onStop");
@@ -54,6 +60,7 @@ public class LiveDataActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
         liveData.setValue("onDestroy");
     }
 }

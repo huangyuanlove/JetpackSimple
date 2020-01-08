@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".architecture.lifecycles.WithoutLifeCycleActivity"></activity>
+        <activity android:name=".architecture.roomword.NewWordActivity"></activity>
+        <activity android:name=".architecture.roomword.RoomWordActivity" />
+        <activity android:name=".architecture.lifecycles.WithoutLifeCycleActivity" />
         <activity
             android:name=".ui.palette.PaletteActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
