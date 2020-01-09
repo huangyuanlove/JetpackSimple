@@ -8,21 +8,15 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Description:
- * Author: huangyuan
- * Create on: 2020-01-08
- * Email: huangyuan@chunyu.me
- */
 
-@Database(entities = {Word.class}, version = 1, exportSchema = false)
+@Database(entities = {Word.class,Man.class}, version = 1, exportSchema = false)
 public abstract class WordRoomDatabase extends RoomDatabase {
 
     public abstract WordDAO wordDAO();
+    public abstract ManDAO ManDAO();
 
     private static volatile WordRoomDatabase INSTANCE;
     private static final int NUMBER_OF_THREAD = 4;
@@ -52,7 +46,8 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (WordRoomDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), WordRoomDatabase.class, "word_room.db")
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                            WordRoomDatabase.class, "word_room.db")
                             .addCallback(roomDatabaseCallback)
                             .build();
 

@@ -24,5 +24,23 @@ Room 包含 3 个主要组件：
 
 ##### 添加依赖
 
+选择合适的版本
+
+```
+// Room components
+implementation "androidx.room:room-runtime:2.2.3"
+annotationProcessor "androidx.room:room-compiler:2.2.3"
+androidTestImplementation "androidx.room:room-testing:2.2.3"
+
+// Lifecycle components
+implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.1.0"
+
+// UI
+implementation "com.google.android.material:material:1.0.0"
+
+```
+
+
 
 

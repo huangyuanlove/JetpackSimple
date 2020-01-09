@@ -8,7 +8,6 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user",indices = {@Index(value = {"id","name"},unique = true)})
-//@Entity(primaryKeys = {"id", "name"})
 public class User {
 
 
@@ -42,7 +41,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Man{" +
                 "id=" + id +
                 ", age=" + age +
                 ", name='" + name + '\'' +

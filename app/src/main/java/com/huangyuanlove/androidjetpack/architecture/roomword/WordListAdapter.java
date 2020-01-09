@@ -12,12 +12,7 @@ import com.huangyuanlove.androidjetpack.R;
 
 import java.util.List;
 
-/**
- * Description:
- * Author: huangyuan
- * Create on: 2020-01-08
- * Email: huangyuan@chunyu.me
- */
+
 public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolder> {
 
     class WordViewHolder extends RecyclerView.ViewHolder {

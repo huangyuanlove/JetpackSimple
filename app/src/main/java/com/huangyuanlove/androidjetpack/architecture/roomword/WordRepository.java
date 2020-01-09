@@ -1,17 +1,13 @@
 package com.huangyuanlove.androidjetpack.architecture.roomword;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-/**
- * Description:
- * Author: huangyuan
- * Create on: 2020-01-08
- * Email: huangyuan@chunyu.me
- */
+
 public class WordRepository {
 
     private WordDAO wordDAO;
@@ -26,6 +22,7 @@ public class WordRepository {
 
 
     public LiveData<List<Word>> getAllWords() {
+        Log.e("huangyuan","WordRepository#getAllWords");
         return allWords;
     }
 
@@ -33,6 +30,7 @@ public class WordRepository {
         WordRoomDatabase.databaseWriteExecutor.execute(new Runnable() {
             @Override
             public void run() {
+                Log.e("huangyuan","WordRepository#insert");
                 wordDAO.insert(word);
             }
         });

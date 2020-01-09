@@ -5,12 +5,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-/**
- * Description:
- * Author: huangyuan
- * Create on: 2020-01-08
- * Email: huangyuan@chunyu.me
- */
+
 @Entity(tableName = "word_table")
 public class Word  {
 
