@@ -39,8 +39,6 @@ public class TabFragment extends Fragment {
             bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.palette_gray);
         } else if (tab == 3) {
             bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.palette_green);
-        } else if (tab == 4) {
-            bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
         }
         imageView.setImageBitmap(bitmap);
         return view;

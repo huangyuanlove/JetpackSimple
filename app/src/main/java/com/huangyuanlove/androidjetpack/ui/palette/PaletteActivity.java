@@ -29,7 +29,7 @@ public class PaletteActivity extends AppCompatActivity {
     private TabFragment tab1;
     private TabFragment tab2;
     private TabFragment tab3;
-    private TabFragment tab4;
+
 
     private Toolbar toolbar;
     private List<TabFragment> fragments = new ArrayList<>();
@@ -70,15 +70,9 @@ public class PaletteActivity extends AppCompatActivity {
         tab3.setArguments(bundle3);
 
 
-        tab4 = new TabFragment();
-        Bundle bundle4 = new Bundle();
-        bundle4.putInt("TAB", 4);
-        tab4.setArguments(bundle4);
-
         fragments.add(tab1);
         fragments.add(tab2);
         fragments.add(tab3);
-        fragments.add(tab4);
     }
 
     private boolean isInit = false;
@@ -114,8 +108,6 @@ public class PaletteActivity extends AppCompatActivity {
             bitmap = tab2.getBitmap();
         } else if (position == 2) {
             bitmap = tab3.getBitmap();
-        } else if (position == 3) {
-            bitmap = tab4.getBitmap();
         }
         if (bitmap == null) {
             return;
